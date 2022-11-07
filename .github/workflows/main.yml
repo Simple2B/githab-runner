@@ -2,7 +2,12 @@
 
 name: Build docker image and push on dockerhub
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - 'main'
+      - 'develop'
+
 
 jobs:
   build:
